@@ -15,7 +15,7 @@ if (isinstance(request, dict) and request['message'] == 'Not Found'):
 
 if (isinstance(request, list)):
     currentData = request[-1]
-    workbook = xlsxwriter.Workbook('data.xlsx')
+    workbook = xlsxwriter.Workbook(country+'.xlsx')
     worksheet = workbook.add_worksheet()
 
     worksheet.write('A1', 'Country')
